@@ -1,34 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
+
 <head>
-  <title>Valorant Skill Ban</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VALORANT 스킬 밴 시스템</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- 네 HTML -->
+  <div class="header">
+    <h1>VALORANT 스킬 밴 시스템</h1>
+
+    <div class="controls">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="요원 검색..."
+      >
+
+      <div id="banCount">
+        밴 수: 0
+      </div>
+
+      <button id="resetBtn">
+        모든 밴 해제
+      </button>
+    </div>
+  </div>
+
+  <div id="agentContainer"></div>
 
   <script src="script.js"></script>
+
 </body>
+
 </html>
-<div class="header">
-  <h1>VALORANT 스킬 밴 시스템</h1>
-
-  <div class="controls">
-    <input
-      type="text"
-      id="searchInput"
-      placeholder="요원 검색..."
-    />
-
-    <div id="banCount">
-      밴 수: 0
-    </div>
-
-    <button id="resetBtn">
-      모든 밴 해제
-    </button>
-  </div>
-</div>
-
-<div id="agentContainer"></div>
