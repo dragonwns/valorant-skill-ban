@@ -1,0 +1,146 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Pretendard,sans-serif;
+}
+
+body{
+  background:#0f1923;
+  color:white;
+  padding:30px;
+}
+
+.header{
+  margin-bottom:30px;
+}
+
+h1{
+  text-align:center;
+  margin-bottom:20px;
+  color:#ff4655;
+  letter-spacing:1px;
+}
+
+.controls{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+}
+
+#searchInput{
+  width:250px;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  background:#1f2937;
+  color:white;
+}
+
+#banCount{
+  display:flex;
+  align-items:center;
+  padding:0 15px;
+  background:#1f2937;
+  border-radius:10px;
+  font-weight:bold;
+}
+
+#resetBtn{
+  padding:12px 18px;
+  border:none;
+  border-radius:10px;
+  background:#ff4655;
+  color:white;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+#agentContainer{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.agent-card{
+  background:#16202a;
+  border:1px solid #253445;
+  border-radius:16px;
+  padding:16px;
+  transition:.2s;
+}
+
+.agent-card:hover{
+  border-color:#ff4655;
+  transform:translateY(-3px);
+}
+
+.agent-name{
+  text-align:center;
+  margin-bottom:10px;
+  font-size:20px;
+  font-weight:bold;
+}
+
+.agent-img{
+  width:90px;
+  height:90px;
+  object-fit:contain;
+  display:block;
+  margin:0 auto 15px;
+}
+
+.skills{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+}
+
+.skill{
+  position:relative;
+
+  width:70px;
+  height:70px;
+
+  background:#253445;
+  border-radius:12px;
+
+  overflow:hidden;
+  cursor:pointer;
+}
+
+.skill img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  padding:8px;
+}
+
+.skill.banned{
+  filter:brightness(50%);
+  border:4px solid #ff4655;
+}
+
+.skill.banned::after{
+  content:"";
+
+  position:absolute;
+
+  top:50%;
+  left:-30%;
+
+  width:160%;
+  height:5px;
+
+  background:#ff4655;
+
+  transform:rotate(-45deg);
+
+  pointer-events:none;
+}
+
+@media(max-width:1200px){
+  #agentContainer{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
